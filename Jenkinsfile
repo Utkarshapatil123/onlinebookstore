@@ -1,12 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('pull repo') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Utkarshapatil123/onlinebookstore.git'
-                
-            }
-        }
         stage('Building war') {
             steps {
                 sh 'mvn clean package'
