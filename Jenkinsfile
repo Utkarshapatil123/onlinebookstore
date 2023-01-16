@@ -29,7 +29,7 @@ pipeline {
                 '''
                 }
             }
-        }
+        
         stage('s3-to-tomcat') {
             steps{
                 withCredentials([sshUserPrivateKey(credentialsId: 'ec2', keyFileVariable: 'ec2', usernameVariable: 'utkarsha')]) {
@@ -53,3 +53,4 @@ pipeline {
             } 
         }
     }
+}
